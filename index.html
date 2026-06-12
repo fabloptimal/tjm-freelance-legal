@@ -752,6 +752,21 @@
       if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
+
+  /* ── REDIRECT ANCIENS LIENS #mentions-legales → legal.html ── */
+  (function() {
+    const hashMap = {
+      'mentions-legales':   'legal.html#mentions',
+      'mentions':           'legal.html#mentions',
+      'confidentialite':    'legal.html#confidentialite',
+      'conditions':         'legal.html#conditions',
+      'cookies':            'legal.html#cookies',
+    };
+    const hash = window.location.hash.replace('#', '');
+    if (hash && hashMap[hash]) {
+      window.location.replace(hashMap[hash]);
+    }
+  })();
 </script>
 
 </body>
