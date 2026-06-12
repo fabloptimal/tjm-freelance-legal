@@ -348,70 +348,6 @@
     .statut-card:hover { transform: translateY(-3px); }
     .statut-card.premium:hover { border-color: rgba(96,165,250,.6); }
 
-    /* ── LEGAL TABS ── */
-    .legal-section { background: #f8fafc; }
-    .tabs {
-      display: flex; gap: 4px;
-      background: var(--border);
-      border-radius: 10px; padding: 4px;
-      margin-bottom: 32px; flex-wrap: wrap;
-    }
-    .tab-btn {
-      flex: 1; min-width: 140px;
-      background: transparent; border: none;
-      border-radius: 7px; padding: 9px 14px;
-      font-size: 13px; font-weight: 500; font-family: inherit;
-      color: var(--ink-dim); cursor: pointer;
-      transition: background .2s, color .2s;
-    }
-    .tab-btn.active { background: #fff; color: var(--ink); box-shadow: 0 1px 4px rgba(0,0,0,.1); }
-    .tab-panel { display: none; }
-    .tab-panel.active { display: block; }
-
-    .legal-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 36px 40px;
-    }
-    @media (max-width: 600px) { .legal-box { padding: 24px 20px; } }
-    .legal-box h2 {
-      font-family: 'DM Serif Display', serif;
-      font-size: 1.6rem; margin-bottom: 24px;
-      padding-bottom: 16px; border-bottom: 1px solid var(--border);
-    }
-    .legal-block { margin-bottom: 28px; }
-    .legal-block h3 {
-      font-size: 14px; font-weight: 600;
-      font-family: 'DM Mono', monospace;
-      letter-spacing: .04em; text-transform: uppercase;
-      color: var(--accent); margin-bottom: 10px;
-    }
-    .legal-block p, .legal-block li {
-      font-size: 14px; color: var(--ink-dim);
-      line-height: 1.75;
-    }
-    .legal-block ul { padding-left: 18px; margin-top: 8px; }
-    .legal-block ul li { margin-bottom: 4px; }
-    .legal-table {
-      width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px;
-    }
-    .legal-table th {
-      text-align: left; padding: 8px 12px;
-      background: #f1f5f9; color: var(--ink);
-      font-size: 12px; font-weight: 600;
-    }
-    .legal-table td {
-      padding: 10px 12px; color: var(--ink-dim);
-      border-bottom: 1px solid var(--border);
-    }
-    .legal-table tr:last-child td { border-bottom: none; }
-    .alert-box {
-      background: #fef3c7; border: 1px solid #fcd34d;
-      border-radius: 8px; padding: 14px 16px;
-      font-size: 13px; color: #92400e;
-      margin-top: 12px; line-height: 1.6;
-    }
 
     /* ── FOOTER ── */
     footer {
@@ -628,248 +564,6 @@
   </div>
 </section>
 
-<!-- ── MENTIONS LÉGALES ── -->
-<section class="section legal-section" id="mentions-legales">
-  <div class="section-inner">
-    <div class="section-label">Conformité · Législation française</div>
-    <h2 class="section-title">Mentions légales &amp;<br/>politique de confidentialité</h2>
-    <p class="section-body" style="margin-bottom:40px;">Conformément à la loi n° 2004-575 du 21 juin 2004 pour la Confiance dans l'Économie Numérique (LCEN) et au Règlement Général sur la Protection des Données (RGPD).</p>
-
-    <div class="tabs" role="tablist">
-      <button class="tab-btn active" role="tab" aria-selected="true" onclick="switchTab(this,'tab-mentions')">Mentions légales</button>
-      <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'tab-confidentialite')">Confidentialité</button>
-      <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'tab-conditions')">Conditions d'utilisation</button>
-      <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab(this,'tab-cookies')">Cookies</button>
-    </div>
-
-    <!-- TAB 1 : MENTIONS LÉGALES -->
-    <div class="tab-panel active" id="tab-mentions">
-      <div class="legal-box">
-        <h2>Mentions légales</h2>
-        <p style="font-size:13px;color:var(--ink-faint);margin-bottom:24px;">Dernière mise à jour : avril 2026</p>
-
-        <div class="legal-block">
-          <h3>Éditeur de l'application</h3>
-          <table class="legal-table">
-            <tr><th>Champ</th><th>Information</th></tr>
-            <tr><td>Nom</td><td>Fabrice Larmonie</td></tr>
-            <tr><td>Statut juridique</td><td>Micro-entrepreneur</td></tr>
-            <tr><td>SIRET</td><td>901 314 666 00016</td></tr>
-            <tr><td>Adresse</td><td>76 Grande Rue, 77410 Villevaudé, France</td></tr>
-            <tr><td>Téléphone</td><td>+33 6 81 65 57 75</td></tr>
-            <tr><td>Email</td><td><a href="mailto:HARMONIE.HPS@gmail.com" style="color:var(--accent)">HARMONIE.HPS@gmail.com</a></td></tr>
-            <tr><td>Pays</td><td>France</td></tr>
-          </table>
-        </div>
-
-        <div class="legal-block">
-          <h3>Hébergement</h3>
-          <p>L'application TJM Freelance est distribuée exclusivement via l'App Store d'Apple Inc.</p>
-          <table class="legal-table" style="margin-top:10px;">
-            <tr><th>Hébergeur</th><th>Coordonnées</th></tr>
-            <tr><td>Apple Inc.</td><td>One Apple Park Way, Cupertino, CA 95014, États-Unis</td></tr>
-            <tr><td>GitHub Inc. (JSON public)</td><td>88 Colin P. Kelly Jr. St., San Francisco, CA 94107, États-Unis</td></tr>
-          </table>
-          <p style="margin-top:8px;">Le fichier JSON des taux URSSAF est hébergé sur GitHub Pages (fabloptimal.github.io). Aucune donnée utilisateur n'est transmise lors de cet accès.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Propriété intellectuelle</h3>
-          <p>L'application TJM Freelance, son code source, son design et ses contenus sont la propriété exclusive de Fabrice Larmonie. Toute reproduction, représentation ou distribution, totale ou partielle, sans autorisation préalable et écrite est interdite, conformément aux articles L. 335-2 et suivants du Code de la propriété intellectuelle.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Responsabilité</h3>
-          <p>Les calculs fournis par l'application sont des <strong>estimations indicatives</strong> basées sur les taux de charges URSSAF en vigueur. Ils ne constituent pas un conseil fiscal, comptable ou juridique au sens de la loi. L'éditeur décline toute responsabilité quant aux décisions prises sur la base des résultats de l'application. Consultez un expert-comptable pour une analyse personnalisée de votre situation.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Droit applicable</h3>
-          <p>Le présent site et l'application sont soumis au droit français. Tout litige relatif à son utilisation sera soumis à la compétence des tribunaux français, conformément aux règles de droit commun.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Médiation de la consommation</h3>
-          <p>Conformément aux articles L. 611-1 et suivants du Code de la consommation, en cas de litige non résolu, vous pouvez recourir gratuitement à un médiateur de la consommation. La Commission Européenne met également à disposition une plateforme de résolution des litiges en ligne (RLL) à l'adresse : <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener" style="color:var(--accent)">https://ec.europa.eu/consumers/odr</a>.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 2 : CONFIDENTIALITÉ -->
-    <div class="tab-panel" id="tab-confidentialite">
-      <div class="legal-box">
-        <h2>Politique de confidentialité</h2>
-        <p style="font-size:13px;color:var(--ink-faint);margin-bottom:24px;">Dernière mise à jour : avril 2026 — Conforme au RGPD (Règlement UE 2016/679)</p>
-
-        <div class="legal-block">
-          <h3>Responsable du traitement</h3>
-          <p>Fabrice Larmonie, micro-entrepreneur — SIRET 901 314 666 00016<br/>Email : <a href="mailto:HARMONIE.HPS@gmail.com" style="color:var(--accent)">HARMONIE.HPS@gmail.com</a></p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Données collectées</h3>
-          <p><strong>L'application TJM Freelance ne collecte aucune donnée personnelle.</strong></p>
-          <ul>
-            <li>Aucun compte utilisateur requis</li>
-            <li>Aucune donnée transmise à des serveurs tiers</li>
-            <li>Aucun tracking, aucune analytique</li>
-            <li>Les calculs sont effectués localement sur votre appareil</li>
-          </ul>
-          <p style="margin-top:10px;">Les paramètres de calcul (revenu souhaité, frais professionnels, rythme de travail) sont stockés uniquement sur votre appareil via les mécanismes natifs iOS (UserDefaults) et ne sont jamais transmis.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Récupération des taux URSSAF</h3>
-          <p>Les taux de charges affichés dans l'application sont récupérés depuis un fichier JSON public hébergé sur GitHub (fabloptimal.github.io). Cette requête réseau est de nature purement technique : <strong>aucune donnée utilisateur n'est envoyée</strong> lors de cet appel. GitHub peut enregistrer des métadonnées de requête (adresse IP, user-agent) conformément à sa propre politique de confidentialité.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Achats intégrés</h3>
-          <p>L'application propose un achat unique via Apple In-App Purchase. Les transactions sont gérées exclusivement par Apple. L'éditeur n'a accès à aucune information bancaire ou de paiement. Les données de paiement sont régies par la <a href="https://www.apple.com/legal/privacy/fr-ww/" target="_blank" rel="noopener" style="color:var(--accent)">politique de confidentialité d'Apple</a>.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Base légale du traitement</h3>
-          <p>En l'absence de collecte de données personnelles par l'éditeur, aucune base légale au sens de l'article 6 du RGPD n'est requise. Le traitement résiduel (requête GitHub) repose sur l'intérêt légitime de fournir des taux à jour (art. 6.1.f RGPD).</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Vos droits (RGPD)</h3>
-          <p>Conformément au Règlement (UE) 2016/679 et à la loi Informatique et Libertés (loi n° 78-17), vous disposez des droits suivants :</p>
-          <ul>
-            <li><strong>Droit d'accès</strong> (art. 15 RGPD) : obtenir une copie des données vous concernant</li>
-            <li><strong>Droit de rectification</strong> (art. 16) : faire corriger des données inexactes</li>
-            <li><strong>Droit à l'effacement</strong> (art. 17) : demander la suppression de vos données</li>
-            <li><strong>Droit à la portabilité</strong> (art. 20) : recevoir vos données dans un format structuré</li>
-            <li><strong>Droit d'opposition</strong> (art. 21) : vous opposer à un traitement</li>
-          </ul>
-          <p style="margin-top:10px;">Pour exercer ces droits, contactez : <a href="mailto:HARMONIE.HPS@gmail.com" style="color:var(--accent)">HARMONIE.HPS@gmail.com</a></p>
-          <p style="margin-top:8px;">En cas de difficulté, vous pouvez introduire une réclamation auprès de la <strong>CNIL</strong> : <a href="https://www.cnil.fr" target="_blank" rel="noopener" style="color:var(--accent)">www.cnil.fr</a> — 3, place de Fontenoy – TSA 80715, 75334 Paris Cedex 07.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Durée de conservation</h3>
-          <p>L'éditeur ne conservant aucune donnée personnelle, aucune durée de conservation n'est applicable. Les préférences stockées localement sur votre appareil sont sous votre contrôle exclusif et peuvent être supprimées à tout moment en désinstallant l'application.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Transferts hors UE</h3>
-          <p>La requête vers GitHub Inc. (hébergé aux États-Unis) peut constituer un transfert de données hors UE au sens du Chapitre V du RGPD. Ce transfert ne porte que sur des métadonnées techniques (adresse IP, user-agent) et s'appuie sur les clauses contractuelles types (CCT) et l'accord EU-US Data Privacy Framework.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Modifications</h3>
-          <p>Cette politique de confidentialité peut être mise à jour. La date de dernière modification est indiquée en haut de cette page. Nous vous invitons à la consulter régulièrement.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 3 : CONDITIONS D'UTILISATION -->
-    <div class="tab-panel" id="tab-conditions">
-      <div class="legal-box">
-        <h2>Conditions générales d'utilisation</h2>
-        <p style="font-size:13px;color:var(--ink-faint);margin-bottom:24px;">En vigueur au 1er avril 2026</p>
-
-        <div class="legal-block">
-          <h3>Objet</h3>
-          <p>Les présentes Conditions Générales d'Utilisation (CGU) ont pour objet de définir les conditions d'accès et d'utilisation de l'application mobile TJM Freelance (ci-après "l'Application"), éditée par Fabrice Larmonie (micro-entrepreneur).</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Acceptation</h3>
-          <p>Le téléchargement et l'utilisation de l'Application impliquent l'acceptation pleine et entière des présentes CGU. Si vous n'acceptez pas ces conditions, vous devez cesser d'utiliser l'Application.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Description du service</h3>
-          <p>L'Application permet de calculer un Taux Journalier Moyen (TJM) indicatif en fonction de paramètres saisis par l'utilisateur (revenu souhaité, frais, rythme de travail) et des taux de charges URSSAF applicables selon le statut juridique sélectionné.</p>
-          <div class="alert-box">
-            Les résultats fournis sont des <strong>estimations indicatives</strong>. Ils ne constituent pas un conseil fiscal, comptable ou juridique. Consultez un expert-comptable pour une analyse adaptée à votre situation personnelle.
-          </div>
-        </div>
-
-        <div class="legal-block">
-          <h3>Disponibilité</h3>
-          <p>L'éditeur s'efforce d'assurer la disponibilité de l'Application mais ne peut garantir une disponibilité continue. Des interruptions peuvent survenir pour maintenance, mise à jour ou pour des causes indépendantes de sa volonté.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Propriété intellectuelle</h3>
-          <p>L'ensemble des éléments composant l'Application (code, design, textes, icônes) est protégé par le droit d'auteur conformément au Code de la propriété intellectuelle. Toute reproduction, modification ou utilisation commerciale sans autorisation est strictement interdite.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Limitation de responsabilité</h3>
-          <p>L'éditeur ne peut être tenu responsable des dommages directs ou indirects résultant de :</p>
-          <ul>
-            <li>L'utilisation ou l'impossibilité d'utiliser l'Application</li>
-            <li>Des décisions prises sur la base des estimations fournies</li>
-            <li>Des inexactitudes dans les taux URSSAF ou leur évolution législative</li>
-            <li>Tout dysfonctionnement d'Apple In-App Purchase</li>
-          </ul>
-        </div>
-
-        <div class="legal-block">
-          <h3>Achats intégrés — politique de remboursement</h3>
-          <p>Le déblocage de la version complète s'effectue via un achat unique sur l'App Store. Conformément à la politique d'Apple, les demandes de remboursement sont traitées par Apple à l'adresse <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener" style="color:var(--accent)">reportaproblem.apple.com</a>. Conformément à l'article L. 221-28 du Code de la consommation, le droit de rétractation ne s'applique pas aux contenus numériques dont l'exécution a commencé avec votre accord préalable.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Droit applicable et juridiction</h3>
-          <p>Les présentes CGU sont soumises au droit français. Tout litige relatif à leur interprétation ou à leur exécution relève de la compétence des tribunaux français, sous réserve des dispositions d'ordre public protégeant les consommateurs.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Modifications des CGU</h3>
-          <p>L'éditeur se réserve le droit de modifier les présentes CGU à tout moment. Les nouvelles conditions prennent effet dès leur publication. La poursuite de l'utilisation de l'Application après modification vaut acceptation des nouvelles conditions.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- TAB 4 : COOKIES -->
-    <div class="tab-panel" id="tab-cookies">
-      <div class="legal-box">
-        <h2>Politique de gestion des cookies et traceurs</h2>
-        <p style="font-size:13px;color:var(--ink-faint);margin-bottom:24px;">Conformément à la directive ePrivacy (2002/58/CE) et aux recommandations de la CNIL</p>
-
-        <div class="legal-block">
-          <h3>Application mobile</h3>
-          <p>L'application TJM Freelance <strong>n'utilise aucun cookie</strong> au sens technique du terme. Les données de préférence (revenu, frais, statut sélectionné) sont stockées via le mécanisme natif iOS <code>UserDefaults</code>, qui ne constitue pas un traceur au sens de la réglementation ePrivacy et des lignes directrices CNIL.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Site de présentation (ce site)</h3>
-          <p>Ce site de présentation hébergé sur GitHub Pages <strong>n'utilise aucun cookie tiers, aucun traceur analytique et aucun outil de suivi comportemental</strong>.</p>
-          <table class="legal-table">
-            <tr><th>Type de traceur</th><th>Présent</th><th>Finalité</th></tr>
-            <tr><td>Cookies analytiques (Google Analytics, etc.)</td><td>Non</td><td>—</td></tr>
-            <tr><td>Cookies publicitaires</td><td>Non</td><td>—</td></tr>
-            <tr><td>Cookies de session</td><td>Non</td><td>—</td></tr>
-            <tr><td>Pixels de suivi</td><td>Non</td><td>—</td></tr>
-            <tr><td>Polices Google Fonts</td><td>Oui</td><td>Affichage typographique — requête vers servers Google</td></tr>
-          </table>
-          <p style="margin-top:10px;">Le chargement des polices Google Fonts peut entraîner une requête vers les serveurs de Google Inc. pouvant inclure votre adresse IP. Pour éviter cela, vous pouvez bloquer ce domaine via votre navigateur ou utiliser une extension de type uBlock Origin.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Aucune gestion de consentement requise</h3>
-          <p>En l'absence de cookies ou traceurs soumis à consentement, aucun bandeau de gestion des cookies n'est nécessaire sur ce site, conformément aux lignes directrices de la CNIL (délibération n° 2020-091 du 17 septembre 2020).</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>GitHub Pages</h3>
-          <p>Ce site est hébergé sur GitHub Pages (GitHub Inc., filiale de Microsoft). GitHub peut collecter des données techniques (adresse IP, user-agent) dans ses logs d'infrastructure. Ces traitements relèvent de la <a href="https://docs.github.com/fr/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener" style="color:var(--accent)">politique de confidentialité de GitHub</a>.</p>
-        </div>
-
-        <div class="legal-block">
-          <h3>Contact</h3>
-          <p>Pour toute question relative à cette politique :<br/><a href="mailto:HARMONIE.HPS@gmail.com" style="color:var(--accent)">HARMONIE.HPS@gmail.com</a></p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
 
 <!-- ── FOOTER ── -->
 <footer>
@@ -879,17 +573,17 @@
       <div class="footer-sub">Une application de Fabrice Larmonie<br/>SIRET 901 314 666 00016 — Micro-entrepreneur</div>
     </div>
     <div class="footer-links">
-      <a href="#mentions-legales" onclick="switchTabByName('tab-mentions')">Mentions légales</a>
-      <a href="#mentions-legales" onclick="switchTabByName('tab-confidentialite')">Confidentialité</a>
-      <a href="#mentions-legales" onclick="switchTabByName('tab-conditions')">CGU</a>
-      <a href="#mentions-legales" onclick="switchTabByName('tab-cookies')">Cookies</a>
+      <a href="legal.html#mentions">Mentions légales</a>
+      <a href="legal.html#confidentialite">Confidentialité</a>
+      <a href="legal.html#conditions">CGU</a>
+      <a href="legal.html#cookies">Cookies</a>
       <a href="https://apps.apple.com/fr/app/tjm-freelance/id6762246293" target="_blank" rel="noopener">App Store</a>
       <a href="mailto:HARMONIE.HPS@gmail.com">Contact</a>
     </div>
   </div>
   <div class="footer-copy">
     <span>© 2026 Fabrice Larmonie. Tous droits réservés.</span>
-    <span>Fait en France — Conforme LCEN &amp; RGPD</span>
+    <span>Fait en France — Conforme LCEN (loi SREN 2024) &amp; RGPD</span>
   </div>
 </footer>
 
@@ -901,12 +595,6 @@
     btn.classList.add('active');
     btn.setAttribute('aria-selected','true');
     document.getElementById(panelId).classList.add('active');
-  }
-  function switchTabByName(panelId) {
-    const panels = { 'tab-mentions': 0, 'tab-confidentialite': 1, 'tab-conditions': 2, 'tab-cookies': 3 };
-    const idx = panels[panelId];
-    const btns = document.querySelectorAll('.tab-btn');
-    if (btns[idx]) switchTab(btns[idx], panelId);
   }
 
   /* ── HERO ENTRANCE ── */
